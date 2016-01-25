@@ -5,5 +5,13 @@ describe('Task', function(){
     expect(currentTask.description).to.equal("Get groceries from the store");
     expect(currentTask.dueDate).to.equal("Today");
     expect(currentTask.priority).to.equal("Normal");
+    expect(currentTask.status).to.equal();
+  });
+});
+
+describe('completeTask', function(){
+  it('Will mark task as complete', function(){
+    var currentTask = new Task();
+    expect(currentTask.completeTask()).to.equal("Complete");
   });
 });
