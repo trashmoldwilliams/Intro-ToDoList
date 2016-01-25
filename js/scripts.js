@@ -13,12 +13,16 @@ Task.prototype.completeTask = function () {
 $(function() {
   $('form#createTask').submit(function(event) {
     event.preventDefault();
-    var taskEntry = $('input#taskEntry').val();
-    var currentTask = new Task (taskEntry);
+    var newName = $('input#newName').val();
+    var newDescription = $('input#newDescription').val();
+    var newDueDate = $('input#newDueDate').val();
+    var newPriority = $('select#newPriority option:selected').text();
+
+    var currentTask = new Task (newName, newDescription, newDueDate, newPriority);
     $('ul#toDoList').append("<li><span class='current'>" + currentTask.name + "</span></li>");
 
     $('.current').last().click(function(){
-      $(this).addClass("strikeThrough");
+      $(this).append("<ul><li><span>Description: " +currentTask.description+"</span></li></ul>" )
     });
 
   });
