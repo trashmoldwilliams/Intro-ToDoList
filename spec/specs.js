@@ -1,6 +1,9 @@
-// Example spec. Uncomment if you want to see it run in spec-runner.html! Then uncomment the function in scripts.js
-// describe('helloWorld', function(){
-//   it("is going to be false", function(){
-//     expect(helloWorld()).to.equal(false);
-//   });
-// });
+describe('Task', function(){
+  it('Will build a task object', function(){
+    var currentTask = new Task ("Go shopping", "Get groceries from the store", "Today", "Normal")
+    expect(currentTask.name).to.equal("Go shopping");
+    expect(currentTask.description).to.equal("Get groceries from the store");
+    expect(currentTask.dueDate).to.equal("Today");
+    expect(currentTask.priority).to.equal("Normal");
+  });
+});

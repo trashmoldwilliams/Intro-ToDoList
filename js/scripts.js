@@ -1,4 +1,6 @@
-// Uncomment this to see the example spec test pass. Delete if you don't need it!
-// var helloWorld = function(){
-//   return false;
-// };
+var Task = function (name, description, dueDate, priority){
+  this.name = name;
+  this.description = description;
+  this.dueDate = dueDate;
+  this.priority = priority;
+};
