@@ -1,3 +1,7 @@
 .strikeThrough {
   text-decoration: line-through;
 }
+
+.init-hidden {
+  display: none;
+}

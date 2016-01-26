@@ -15,3 +15,10 @@ describe('completeTask', function(){
     expect(currentTask.completeTask()).to.equal("Complete");
   });
 });
+
+describe('setDesc', function(){
+  it('Will set the description', function(){
+    var currentTask = new Task();
+    expect(currentTask.setDesc("Hello World")).to.equal("Hello World");
+  })
+})
